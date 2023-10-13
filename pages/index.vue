@@ -1,6 +1,8 @@
 <template>
   <div>
-    {{ $t("common.name") }}
+    {{ $t("ra.action.add") }}
+    <br />
+    {{ $t("common.label.pricePerHour") }}
     <br />
     <template v-for="locale in availableLocales" :key="locale.code">
       <NuxtLink :to="switchLocalePath(locale.code)">
@@ -17,11 +19,9 @@ import { LocaleObject } from "@nuxtjs/i18n/dist/runtime/composables";
 const { locales, locale } = useI18n();
 const switchLocalePath = useSwitchLocalePath();
 
-const availableLocales = computed(() => {
-  const filteredLocales = (
-    locales.value.filter((l) => typeof l !== "string") as LocaleObject[]
-  ).filter((l) => l.code !== locale.value);
-  console.log("FILTERED LOCALES", filteredLocales);
-  return filteredLocales;
-});
+const availableLocales = computed(() =>
+  (locales.value.filter((l) => typeof l !== "string") as LocaleObject[]).filter(
+    (l) => l.code !== locale.value
+  )
+);
 </script>

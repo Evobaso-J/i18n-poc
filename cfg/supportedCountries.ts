@@ -116,7 +116,7 @@ export const COUNTRY_SV: Country = {
 };
 
 // First one is the default
-const SUPPORTED_COUNTRIES: Country[] = [COUNTRY_IT, COUNTRY_SV];
+const SUPPORTED_COUNTRIES: Country[] = [COUNTRY_IT];
 
 export const DEFAULT_COUNTRY = COUNTRY_IT;
 export const SUPPORTED_LOCALES = SUPPORTED_COUNTRIES.flatMap(

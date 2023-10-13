@@ -10,7 +10,10 @@ export default defineNuxtConfig({
     defaultLocale: "it-IT",
     lazy: true,
     locales,
-    langDir: "lang/",
+    langDir: "lang",
+    experimental: {
+      jsTsFormatResource: true,
+    },
   },
   typescript: {
     typeCheck: true,
