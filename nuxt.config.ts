@@ -1,4 +1,4 @@
-import { locales } from "./lang/localesProvider";
+import { locales } from "./lang/utils/localesProvider";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     defaultLocale: "it-IT",
     lazy: true,
     locales,
-    langDir: "lang",
+    langDir: "lang/locales",
     experimental: {
       jsTsFormatResource: true,
     },

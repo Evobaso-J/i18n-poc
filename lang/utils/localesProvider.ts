@@ -1,5 +1,5 @@
 import { LocaleObject } from "@nuxtjs/i18n/dist/runtime/composables";
-import SUPPORTED_COUNTRIES from "../cfg/supportedCountries";
+import SUPPORTED_COUNTRIES from "../../cfg/supportedCountries";
 
 const getI18nLocales = (): LocaleObject[] =>
   SUPPORTED_COUNTRIES.flatMap(({ i18nLocale, secondaryLangs }) =>
