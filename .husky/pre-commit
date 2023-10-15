@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+if [ -f package-lock.json ]; then
+    tput setaf 1  # Set the text color to red
+    echo YOU ARE USING NPM INSTEAD OF PNPM!
+    tput sgr0    # Reset the text color
+    echo Please install your dependencies with pnpm and try again.\nDelete the package-lock.json file and run pnpm c-i
+    exit 1
+fi
